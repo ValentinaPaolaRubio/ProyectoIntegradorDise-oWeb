@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Montserrat" , sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top:120px ;
+}
+body{
+    width: 100%;
+    color: white;
+}
+:root{
+    --white:#fff;
+    --blue:#51d1f6;
+   --pink:#ea899a;
+    
+ }
+  /*header*/
+  .header{
+    margin: 0 auto;
+    max-width: 1300px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 80px 0px 50px;
+    background: var(--blue);
+ }
+ .header h2{
+   display:none;
+ }
+ .logo-container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+ }
+ .logo-container img{
+    height: 100px;
+    border-radius: 10px;
+    padding:0.3rem;
+    
+ }
+ .navbar i{
+   font-size: 40px;
+   color: var(--white);
+   cursor: pointer;
+   display: none;
+   
+}
+
+ .navbar,.navbar-list,.navbar-access{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .container-list{
+    padding: 20px;
+ }
+ .container-access{
+    padding:20px;
+ }
+ .navbar-list{
+    gap:50px;
+ }
+ .navbar-access{
+    gap: 20px;
+ }
+ 
+ #toggle-menu{
+    display: none;
+ }
+ #toggle-access{
+    display: none;
+ }
+ .navbar a{
+    color: var(--white);
+    font-size:22px;
+ }
+
+ .navbar-access  a{
+    border: 1px solid var(--white);
+    font-size: 14px;
+    padding: 8px 40px;
+    border-radius: 3px;
+    transition: all 0.3s linear;
+ }
+ .navbar-access a:hover{
+    background-color: var(--white);
+    color: var(--blue);
+    transition: all 0.3s linear;
+    font-size: 500;
+ }
+ @media(max-width:768px){
+    .header-container{
+        position: sticky;
+        top:0%;
+        z-index: 9999;
+        
+    }
+    .header{
+        padding: 0px 40px 0px 40px;
+       
+    }
+    .header h2{
+      display:flex;
+    }
+    .navbar i{
+      display: flex;
+      justify-content:flex-end;
+      align-items:flex-end;
+      margin-right: 30px;
+      
+    }
+    
+   
+    .navbar-list,.navbar-access{
+        position: absolute;
+        background-color: var(--blue);
+        flex-direction: column;
+        top:100px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh-100px);
+        display: none;
+        z-index: 9999;
+        
+    }
+    #toggle-menu:checked + .navbar-list{
+        display: flex;
+        
+    }
+    #toggle-access:checked + .navbar-access{
+        display: flex;
+    }
+   
+    .navbar-access {
+      padding: 10px 0 10px 0;
+    }
+    .navbar-access li{
+        padding-bottom: 20px;
+    }
+ }
+ .container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+ }
+ .check-in_container{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+ }
+ form{
+    background: rgb(81,209,246,1); 
+    background: linear-gradient(90deg, rgba(81,209,246,1) 0%, rgba(234,137,154) 100%);
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    padding: 30px 30px;
+    border-radius: 20px;
+
+ }
+ form h2{
+    text-align: center;
+    padding-bottom: 20px;
+ }
+ form label{
+    padding-bottom: 10px;
+ }
+ form input{
+    margin-bottom: 10px;
+    height: 40px;
+    border:none;
+    border-radius: 20px;
+    padding: 0 40px;
+ }
+ input:focus{
+    outline: none;
+ }
+ .btn{
+    background: var(--blue);
+    margin-top: 20px;
+    cursor: pointer;
+    border: solid 2px var(--pink);
+    color: var(--white);
+ }
+ .btn:hover{
+    background: var(--pink);
+    border: solid 2px var(--blue);
+    color: var(--white);
+ }
+ .check-in_img img{
+    display: none;   
+ }
+ .container-whatsapp i{
+   font-size: 40px;
+   color:green;
+   width: 55px;
+   height: 55px;
+   line-height: 55px;
+   bottom:50px;
+   right: 1px;
+   text-align: center;
+   z-index: 999;
+   position:fixed;
+ }
+
+ @media screen and (min-width:1024px){
+    .login-container{
+        max-width: 700px;
+        min-height: 200px;
+        height: 60%;
+        width: 100%;
+
+    }
+    .check-in_img {
+        display: block;
+        height: 100%;
+        width: 60%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 0 20px 20px 0;
+    }
+    .check-in_img img{
+        display: block;
+        height: 477px;
+        width: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 0 20px 20px 0;
+    }
+   
+    form{
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        padding: 20px;
+        border-radius:  20px 0 0 20px ;   
+    }
+    .container-whatsapp i{
+      font-size: 55px;
+      color:green;
+      width: 55px;
+      height: 55px;
+      line-height: 55px;
+      bottom:20px;
+      right: 10px;
+      text-align: center;
+      z-index: 999;
+      position:fixed;
+    }
+ }
+
+ /*footer*/
+ .footer{
+    display: flex;
+    justify-content: space-around;
+    max-width: 1300px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    background:var(--blue);
+ }
+ .footer-img{
+    height: 100%;
+    display: flex;
+    align-items: center;
+ }
+ .footer-img img{
+    height: 100px;
+    border-radius: 10px;
+    padding:0.3rem;
+ }
+ .footer-terms {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--white);
+ }
+ .footer-terms h3{
+    font-weight: 500;
+    padding-bottom: 10px;
+    font-size: 20px;
+ }
+ .footer-terms a{
+    color: var(--white);
+    font-weight: 300;
+    padding:12px 0;
+ }
+ .footer-info{
+    display: flex;
+    flex-direction: column;
+   justify-content:center;
+   align-items: center;
+    min-height: 100px;
+ }
+ .footer-info h3{
+    font-weight: 500;
+    padding-bottom: 10px;
+    font-size: 20px;
+ }
+ .footer-info a{
+    color: var(--white);
+    font-weight: 300;
+ }
+ .location, .phone, .mail{
+    padding:5px 0;
+    font-size: 15px;
+ }
+ 
+ .footer-social{
+    padding:15px 0;
+ }
+ .footer-social i{
+    padding:0 10px;
+   
+ }
+ 
+ 
+ @media (max-width:768px){
+    .footer{
+       
+       display: flex;
+       justify-content: center;
+       text-align: center;
+       flex-direction: column;
+       margin:0 auto;
+ 
+    }
+    .footer-img{
+       display: none;
+ 
+    }
+   
+ }
